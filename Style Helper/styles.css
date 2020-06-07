@@ -1,0 +1,122 @@
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0,0,0,1), rgba(255,255,255,1));
+}
+
+#main {
+  width: 100%;
+  height: auto;
+
+}
+
+.test1, .test2, .test3, .test4, .test5, .mask {
+  background: rgba(0,0,0,0);
+  font-size: 4em;
+  margin: 0.1em 0.5em;
+  padding: 0.1em;
+  color: rgba(0,0,0,0) !important;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 0.1em;
+  display: block;
+  text-align: center;
+}
+
+@keyframes Rainbow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.rainbow {
+  filter: hue-rotate(0deg);
+  animation: Rainbow 5s infinite linear;
+  animation-delay: 0s;
+}
+
+
+.test1 {
+  /* Width of button */
+  width: 4em;
+  padding: 0rem;
+  margin: 1em auto;
+  /* Border Width */
+  border: 0.75em solid;
+  border-image: radial-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0) 25%, violet, rgb(79, 8, 181), rgb(86, 111, 228), rgb(29, 148, 164), green, yellow, orange, red 59%, rgba(0,0,0,0) 60%) 49.5% 49.5% 49.5% 49.5%;
+
+
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+
+}
+
+.test1:hover {
+  animation: Rainbow 1s infinite linear;
+}
+
+svg {
+  position: relative;
+  /* Control svg scaling */
+  width: 40%;
+}
+
+
+.test2 {
+  text-align: center;
+  width: 4em;
+  padding: 1rem;
+  margin: 1em auto;
+  /* border: 10px solid; */
+  border-radius: 30px;
+  background-clip: border-box, text;
+  -moz-background-clip: border-box, text;
+  -webkit-background-clip: border-box, text;
+  background-image: radial-gradient(transparent, transparent 57%, violet, rgb(79, 8, 181), rgb(86, 111, 228), rgb(29, 148, 164), green, yellow, orange, red 100%);
+  /* To change text color, insert another color after background image color above */
+  line-height: 100px;
+}
+
+.test3 {
+  /* Width of button */
+  width: 3em;
+  padding: 0rem;
+  margin: 1em auto;
+  /* Border Width */
+  border: 30px solid;
+  border-image: radial-gradient(rgba(0,0,0,0) 0%,
+                                rgba(0,0,0,0) 25%,
+                                violet, rgb(79, 8, 181),
+                                rgb(86, 111, 228),
+                                rgb(29, 148, 164),
+                                green,
+                                yellow,
+                                orange,
+                                red,
+                                rgba(0,0,0,0) 70%) 49.5% 49.5% 49.5% 49.5%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background: transparent;
+
+
+  text-shadow:  0px  0px  10px   rgba(255, 255, 255, 0.6),
+                0px  0px  15px  rgba(3, 164, 255, 0.7),
+                0px  0px  25px  rgba(3, 164, 255, 0.7),
+                0px  0px  50px  rgba(3, 164, 255, 0.7),
+                0px  0px  30px  rgba(3, 164, 255, 0.9),
+                0px  0px  40px  rgba(3, 164, 255, 0.9);
+}

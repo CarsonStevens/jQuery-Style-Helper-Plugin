@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Style Helper Playground</title>
+
+
+
+  <link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.theme.css" />
+  <link rel="stylesheet" href="styles.css" />
+
+
+
+  <script src="https://kit.fontawesome.com/746df76887.js" crossorigin="anonymous"></script>
+
+
+
+  <script src="./jquery-3.4.1.min.js"></script>
+  <script src="./jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="./spectrum-2.0.0/dist/spectrum.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./spectrum-2.0.0/dist/spectrum.css">
+
+
+  <script src="style-helper.js"></script>
+</head>
+
+<body>
+  <section id="main">
+    <div class="test1 rainbow">
+      <svg class="rainbow" viewBox="0 0 200 100" preserveAspectRatio='none'>
+      <title>Experience Design</title>
+      <g style="overflow:visible; text-anchor: middle;stroke-width: 2px; stroke-linecap='round'; font-size: 1em; fill: none" x="100" y="50">
+        <defs>
+          <linearGradient id="rainbow__gradient">
+            <stop offset="15%" stop-color="violet" />
+            <stop offset="30%" stop-color="indigo" />
+            <stop offset="45%" stop-color="blue" />
+            <stop offset="60%" stop-color="green" />
+            <stop offset="75%" stop-color="yellow" />
+            <stop offset="90%" stop-color="orange" />
+            <stop offset="100%" stop-color="red" />
+          </linearGradient x2="10em" y2="1em">
+          <filter id="glow1" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="20 20" result="glow"/>
+            <feMerge>
+              <feMergeNode in="glow"/>
+              <feMergeNode in="glow"/>
+              <feMergeNode in="glow"/>
+            </feMerge>
+          </filter>
+          <filter id="glow2" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="4 4" result="glow"/>
+            <feMerge>
+              <feMergeNode in="glow"/>
+              <feMergeNode in="glow"/>
+            </feMerge>
+          </filter>
+          <filter id="glow3" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="2 2" result="glow"/>
+          </filter>
+          <mask id="textMask">
+            <text style="fill: none;" x="100" y="50">
+              Test
+            </text>
+          </mask>
+        </defs>
+        <text style="filter: url(#glow1);  text-anchor: middle;" x="100" y="80">
+          Test
+        </text>
+        <text style="filter: url(#glow2);  text-anchor: middle;" x="100" y="80">
+          Test
+        </text>
+        <text x="100" y="80" style="stroke: url(#rainbow__gradient);  text-anchor: middle;">
+          Test
+        </text>
+        <g mask="url(#textMask)">
+          <g style="filter: url(#glow3);fill: url(#rainbow__gradient);  text-anchor: middle;">
+            <text style="fill: none;" x="100" y="80">
+              Test
+            </text>
+          </g>
+        </g>
+      </g>
+    </svg></div>
+
+    <span class="test2 rainbow">Test 2</span>
+    <span class="test3">Test 3</span>
+  </section>
+
+</body>
+
+</html>
